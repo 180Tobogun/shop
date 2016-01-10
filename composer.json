@@ -20,7 +20,8 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "twbs/bootstrap": "3.3.*",
         "sonata-project/admin-bundle": "2.3.*",
-        "sonata-project/doctrine-orm-admin-bundle": "2.3.*"
+        "sonata-project/doctrine-orm-admin-bundle": "2.3.*",
+        "sonata-project/ecommerce": "dev-develop"
 
     },
     "require-dev": {
@@ -55,5 +56,7 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

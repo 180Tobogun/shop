@@ -16,18 +16,30 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
-            new Tobogun\HomepageBundle\TobogunHomepageBundle(),
 
-
-            // These are the other bundles the SonataAdminBundle relies on
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-
-            // And finally, the storage and SonataAdminBundle
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new Sonata\IntlBundle\SonataIntlBundle(),
+            new Sonata\NotificationBundle\SonataNotificationBundle(),
+            new Sonata\UserBundle\SonataUserBundle(),
+            new Sonata\CustomerBundle\SonataCustomerBundle(),
+            new Sonata\ProductBundle\SonataProductBundle(),
+            new Sonata\BasketBundle\SonataBasketBundle(),
+            new Sonata\OrderBundle\SonataOrderBundle(),
+            new Sonata\InvoiceBundle\SonataInvoiceBundle(),
+            new Sonata\MediaBundle\SonataMediaBundle(),
+            new Sonata\DeliveryBundle\SonataDeliveryBundle(),
+            new Sonata\PaymentBundle\SonataPaymentBundle(),
+            new Sonata\PriceBundle\SonataPriceBundle(),
+
+            new AppBundle\AppBundle(),
+            new Tobogun\HomepageBundle\TobogunHomepageBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -38,6 +50,11 @@ class AppKernel extends Kernel
         }
 
         return $bundles;
+    }
+
+    public function init()
+    {
+        bcscale(3);
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)
