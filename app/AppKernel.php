@@ -38,6 +38,15 @@ class AppKernel extends Kernel
             new Sonata\PaymentBundle\SonataPaymentBundle(),
             new Sonata\PriceBundle\SonataPriceBundle(),
 
+            new Application\Sonata\CustomerBundle\ApplicationSonataCustomerBundle(),
+            new Application\Sonata\DeliveryBundle\ApplicationSonataDeliveryBundle(),
+            new Application\Sonata\BasketBundle\ApplicationSonataBasketBundle(),
+            new Application\Sonata\InvoiceBundle\ApplicationSonataInvoiceBundle(),
+            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
+            new Application\Sonata\OrderBundle\ApplicationSonataOrderBundle(),
+            new Application\Sonata\PaymentBundle\ApplicationSonataPaymentBundle(),
+            new Application\Sonata\ProductBundle\ApplicationSonataProductBundle(),
+
             new AppBundle\AppBundle(),
             new Tobogun\HomepageBundle\TobogunHomepageBundle(),
         );
